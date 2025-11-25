@@ -15,10 +15,16 @@ OUTPUT_DIR="/mnt/eec07521-c36a-4d2b-9047-0110e7749eae/Nextcloud/Dropbox import/d
 #     done
 # done
 
+
+# pr_dataset+20
 for label in "Peperomia+blanda" "Peperomia+catharinae" "Peperomia+corcovadensis" "Peperomia+glabella" "Peperomia+martiana" "Peperomia+rotundifolia" "Peperomia+tetraphylla" "Peperomia+urocarpa" "Piper+aduncum" "Piper+amalago" "Piper+arboreum" "Piper+caldense" "Piper+crassinervium" "Piper+dilatatum" "Piper+gaudichaudianum" "Piper+glabratum" "Piper+grazielae" "Piper+hispidum" "Piper+mikanianum" "Piper+miquelianum" "Piper+regnellii" "Piper+solmsianum" "Piper+xylosteoides" ; do
     for color in "RGB"; do
         for size in "256"; do
-            python main.py --input_dir "${INPUT_DIR}/pr_dataset+20+rotation+colorjitter/${color}/${size}/${label}" --num_patches ${NUM_PATCHES} --output_dir "${OUTPUT_DIR}/pr_dataset+20+rotation+colorjitter/${color}/${size}/${label}"
+            python main3.py --input_dir "${INPUT_DIR}/pr_dataset+20+rotation+colorjitter+no-white/${color}/${size}/${label}" --num_patches ${NUM_PATCHES} --output_dir "${OUTPUT_DIR}/pr_dataset+20+rotation+colorjitter+no-white/${color}/${size}/${label}"
         done
     done
 done
+
+
+
+
